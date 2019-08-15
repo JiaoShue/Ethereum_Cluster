@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"input","type":"uint256"}],"name":"Multiply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"uint256"}],"name":"Print","type":"event"}]

@@ -1,0 +1,37 @@
+version: '3.4'
+services:
+  node_slaver:
+    image: shiawase/node_slaver:stable
+    depends_on:
+      - redis
+      - node_master
+    volumes:
+      - ./node_slaver:/opt/node
+    networks:
+      - ethnet
+  node_master:
+    image: shiawase/node_master:stable
+    ports:
+      - "7001:7001"
+    volumes:
+      - ./node_master:/opt/node
+    depends_on:
+      - redis
+    networks:
+      - ethnet
+    environment:
+      - OWNHOST=eth_node_0
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always
+    networks:
+      ethnet:
+        ipv4_address: 172.19.0.20
+networks:
+  ethnet:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.19.0.0/16

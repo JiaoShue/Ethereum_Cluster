@@ -1,0 +1,1 @@
+export const EnodeMap: Map<string, any> = new Map();
