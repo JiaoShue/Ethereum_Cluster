@@ -315,7 +315,7 @@ const index = (props) => {
         onOk={() => handleOk(name,method,callType,paras)}
         okButtonProps={{ disabled: name.trim().length === 0||method.trim().length === 0}}
       >
-        <Alert showIcon message="注意：用event等修饰符修饰的匿名函数不能进行测试" type="info"/>
+        <Alert showIcon message="注意：匿名内部函数无法进行测试" type="info"/>
         <div style={{
           marginTop: 20
         }}>
@@ -537,7 +537,7 @@ const index = (props) => {
                       <Icon type="pause-circle"/>
                     </Button>
                     <Button type={'primary'} onClick={() => setOpen(true)}>
-                      下发合约
+                      上传合约
                       <Icon type="cloud-download"/>
                     </Button>
 
@@ -589,6 +589,7 @@ const index = (props) => {
                       }}
                     >
                       移除集群
+                      <Icon type="warning"/>
                     </Button>
                   </Button.Group>
                 }
