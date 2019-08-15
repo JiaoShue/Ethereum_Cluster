@@ -23,7 +23,7 @@ export const SearchTransactionInfo = (props) => {
         <Description title="交易哈希" value={Transaction.hash} />
         <Description title="发起用户" value={Transaction.from || "无"} />
         <Description title="接收用户" value={Transaction.to || "无"} />
-        <Description title="转账金额" value={Transaction.value || 0} />
+        <Description title="转账金额（ether）" value={Transaction.value/(10**18) || 0} />
         <Description title="gas单价（wei）" value={Transaction.gasPrice || 0} />
         <Description title="gas总数" value={Transaction.gas || 0} />
         <Description title="手续费(ether)" value={(Transaction.gas * Transaction.gasPrice)/(10**18) || 0} />
