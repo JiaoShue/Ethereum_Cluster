@@ -35,7 +35,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "lodash": "^4.17.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^1.0.0",
     "stream-wormhole": "^1.1.0",
